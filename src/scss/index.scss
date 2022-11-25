@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #f7f7f7;
+  }
+  
+  .header {
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(90deg, red, blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hidden {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    .hidden-btn {
+      margin: 0 auto;
+      width: 100px;
+      height: 30px;
+    }
+    .hidden-check {
+      display: none;
+      &:checked + .message {
+        transform: translateX(730px);
+        transition: 1s all ease;
+      }
+    }
+    .message {
+      transform: translateX(-500px);
+      border: 1px solid red;
+      padding: 5px;
+      width: 500px;
+      margin: 10px 0;
+    }
+  }
+  
+  .infinite {
+    height: 300px;
+    width: 100px;
+    margin: 0 auto;
+    .square {
+      margin: 0 auto;
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+      animation: bounce 10s infinite ease;
+    }
+  }
+  
+  .rotate {
+    .square {
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      margin: 0 auto;
+      animation: rotate 3s infinite ease-in-out;
+    }
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(60px);
+    }
+    50% {
+      transform: translateY(120px);
+    }
+    75% {
+      transform: translateY(180px);
+    }
+    100% {
+      transform: translateY(240px);
+    }
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(90deg);
+    }
+    100% {
+      transform: rotate(180deg);
+    }
+  }
+  
